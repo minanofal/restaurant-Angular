@@ -1,0 +1,43 @@
+<div class="banner">
+    <div class="bannercontent">
+        <h1 class="mb-3">Fresh Cooked Food <br> At Your Door.</h1>
+        <a routerLink="menu">ORDER NOW <i class="bi bi-arrow-right"></i></a>
+    </div>
+</div>
+<div class="container-fluid mt-5 mb-5">
+    <div class="row">
+        <h1 class="text-center mb-3" >How Get <span style="color: var(--primary-color) ; font-weight: bold ;">Fresh Food</span>?</h1>
+        <div class="col-lg-4">
+            <div class="step">
+                <h1>1</h1>
+                <p>Select Your Order </p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="step">
+                <h1>2</h1>
+                <p>Fill the details </p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="step">
+                <h1>3</h1>
+                <p>Your Order delivered in minute</p>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container mt-4 mb-4">
+    <div class="row">
+        <h1 class="text-center mb-3" >Customers <span style="color: var(--primary-color) ; font-weight: bold ;">Favourites Food</span></h1>
+        <div class="col-lg-3 mt-3" *ngFor="let fd of food ; index as i">
+            <div class="foodbox" *ngIf="i<=3">
+                <img src="{{fd.foodImg}}"/>
+                <h1>{{fd.foodName}}</h1>
+                <p><i class="bi bi-cash-stack"></i> {{fd.foodPrice}}</p>
+            </div>
+        </div>
+    </div>
+    <a routerLink="menu" class="viwemorebtn">View More <i class="bi bi-arrow-right"></i></a>
+</div>
